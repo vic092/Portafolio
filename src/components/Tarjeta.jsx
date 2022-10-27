@@ -14,7 +14,7 @@ export default function Tarjeta({ pro }) {
           <p className="card-text">{pro.description}</p>
           <div className="row">
             {pro.tools.map((t, i) => (
-              <>
+              
               
               <div className="col-sm-6" key={i}>
                 <div
@@ -34,11 +34,11 @@ export default function Tarjeta({ pro }) {
                       : "bg-dark m-1 p-1 text-center rounded-5"
                     // "fondo5 m-1 p-1 text-center rounded-5"
                   }
-                >
+                > 
                   {t}
                 </div>
               </div>
-              </>
+              
             ))}
           </div>
             <a href={pro.url} className="btn btn-secondary mt-4 ">

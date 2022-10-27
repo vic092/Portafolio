@@ -7,6 +7,28 @@ import Tarjeta from "../components/Tarjeta";
 import Footer from "../components/Footer";
 
 export default function Body() {
+  function openMenu(){
+  const menu = document.getElementById('menu');
+  menu.classList.add('is-active');
+}
+function closeMenu() {
+  const menu = document.getElementById('menu');
+  menu.classList.remove('is-active')
+}
+const elementosAbrirMenu = document.getElementsByClassName("open-menu")
+
+if(elementosAbrirMenu) {
+  for(let i = 0; i < elementosAbrirMenu.length; i++){
+    elementosAbrirMenu[i].addEventListener('click', openMenu)
+  }
+}
+
+const elementosCerrarMenu = document.getElementsByClassName("close-menu");
+if(elementosCerrarMenu){
+  for(let j = 0; j < elementosCerrarMenu.length; j++){
+    elementosCerrarMenu[j].addEventListener('click', closeMenu)
+  }
+}
   return (
     <>
       {/* Barra de navegacion */}
@@ -29,7 +51,7 @@ export default function Body() {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span classNAme="navbar-toggler-icon"></span>
+            <span className="navbar-toggler-icon"></span>
           </button>
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav" style={{ cursor: "pointer" }}>
@@ -38,8 +60,8 @@ export default function Body() {
                   Sobre mi
                 </a>
               </li>
-              <li class="nav-item">
-                <a href="#skills" className="nav-link">
+              <li className="nav-item">
+                <a className="nav-link" href="#skills" >
                   Conociminetos
                 </a>
               </li>
@@ -57,16 +79,49 @@ export default function Body() {
           </div>
         </div>
       </nav>
+
+      {/* Boton del mennu plegable */}
+      <div className="plegable m-3 ">
+        <div className="contenido">
+          <button className="open-menu btn fondo1 text-white">Menu</button>
+        </div>
+        <div id="menu" className="menu-hamburger close-menu">
+          <nav className="menu-hamburger-nav">
+            <ul className="menu-hamburger-list-items">
+              <li>
+                <a href="#">Inicio</a>
+              </li>
+              <li>
+                <a href="#about">Sobre mi</a>
+              </li>
+              <li>
+                <a href="#skills">Conocimientos</a>
+              </li>
+              <li>
+                <a href="#projects">Proyectos</a>
+              </li>
+              <li>
+                <a href="/Portafolio/GitHub">GitHub</a>
+              </li>
+              
+            </ul>
+          </nav>
+        </div>
+      </div>
+
       <main className="container">
         {/* Recepcion */}
 
         <div className="row justify-content-end">
           <div className="col-md-2">
             <button className="btn  fondo5">
-              <a href="https://drive.google.com/file/d/1MMKqK9xTnr84KxD_NJ0Qc9o7UFlR-PoO/view?usp=sharing" style={{textDecoration:'none', color:'#fff'}}>
-              Resumen
+              <a
+                href="https://drive.google.com/file/d/1MMKqK9xTnr84KxD_NJ0Qc9o7UFlR-PoO/view?usp=sharing"
+                style={{ textDecoration: "none", color: "#fff" }}
+              >
+                Resumen
               </a>
-              </button>
+            </button>
           </div>
         </div>
 
@@ -86,14 +141,14 @@ export default function Body() {
 
         <hr className="mt-5 hr-text" data-content="Sobre mi" id="about" />
         {/* Apartado sobre mi */}
-        <section className="row fondo1 mt-5 p-5 text-light rounded-3 animacion1">
-          <div className="col-md-4">
-            <div className="d-flex align-items-center h-100">
+        <section className="row fondo1 mt-5 text-light rounded-3 animacion1">
+          <div className="col-md-4 p-4 ">
+            <div className="d-flex h-100 img_filtro">
               {/* <div className="box"></div> */}
               <img
                 src={perfil}
                 alt="No hay imagen"
-                className="img-fluid rounded-5 img-filtro"
+                className="img-fluid rounded-5"
               />
             </div>
           </div>
@@ -107,17 +162,17 @@ export default function Body() {
               Universidad Politécnica Metropolitana de Hidalgo, realice una
               tesis en la que aborde temas de inteligencia artificial y visión
               artificial enfocándolas a la detección de posibles posturas
-              agresivas. 
-              </p>
-              <p>
-              No tengo experiencia laboral fuera de los procesos de
-              estancias y estadías que curse durante mi formación, actualmente
-              me interesa mucho expandir mi conocimiento en tecnologías
-              enfocadas al desarrollo web o de software y al manejo y
-              procesamiento de datos. Me gusta pensar, me gusta descomponer el
-              problema y buscar soluciones mediante la programación, me es
-              agradable el sentimiento de estar enfocado en la situación que
-              esta profesión genera.
+              agresivas.
+            </p>
+            <p>
+              No tengo experiencia laboral fuera de los procesos de estancias y
+              estadías que curse durante mi formación, actualmente me interesa
+              mucho expandir mi conocimiento en tecnologías enfocadas al
+              desarrollo web o de software y al manejo y procesamiento de datos.
+              Me gusta pensar, me gusta descomponer el problema y buscar
+              soluciones mediante la programación, me es agradable el
+              sentimiento de estar enfocado en la situación que esta profesión
+              genera.
             </p>
           </div>
         </section>

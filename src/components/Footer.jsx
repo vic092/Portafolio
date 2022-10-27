@@ -6,7 +6,6 @@ export default function Footer() {
       <div className="container p-4">
         <h1>&copy; Victor Rodriguez Portafolio</h1>
         <p>2000 - {new Date().getFullYear()}</p>
-        <p>All rights Reserved.</p>
         <p>victorurg86@gmial.com o victrodgrc@gmail.com</p>
       </div>
     </footer>
