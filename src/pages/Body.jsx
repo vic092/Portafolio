@@ -7,28 +7,6 @@ import Tarjeta from "../components/Tarjeta";
 import Footer from "../components/Footer";
 
 export default function Body() {
-  function openMenu(){
-  const menu = document.getElementById('menu');
-  menu.classList.add('is-active');
-}
-function closeMenu() {
-  const menu = document.getElementById('menu');
-  menu.classList.remove('is-active')
-}
-const elementosAbrirMenu = document.getElementsByClassName("open-menu")
-
-if(elementosAbrirMenu) {
-  for(let i = 0; i < elementosAbrirMenu.length; i++){
-    elementosAbrirMenu[i].addEventListener('click', openMenu)
-  }
-}
-
-const elementosCerrarMenu = document.getElementsByClassName("close-menu");
-if(elementosCerrarMenu){
-  for(let j = 0; j < elementosCerrarMenu.length; j++){
-    elementosCerrarMenu[j].addEventListener('click', closeMenu)
-  }
-}
   return (
     <>
       {/* Barra de navegacion */}
@@ -81,34 +59,7 @@ if(elementosCerrarMenu){
       </nav>
 
       {/* Boton del mennu plegable */}
-      <div className="plegable m-3 ">
-        <div className="contenido">
-          <button className="open-menu btn fondo1 text-white">Menu</button>
-        </div>
-        <div id="menu" className="menu-hamburger close-menu">
-          <nav className="menu-hamburger-nav">
-            <ul className="menu-hamburger-list-items">
-              <li>
-                <a href="#">Inicio</a>
-              </li>
-              <li>
-                <a href="#about">Sobre mi</a>
-              </li>
-              <li>
-                <a href="#skills">Conocimientos</a>
-              </li>
-              <li>
-                <a href="#projects">Proyectos</a>
-              </li>
-              <li>
-                <a href="/Portafolio/GitHub">GitHub</a>
-              </li>
-              
-            </ul>
-          </nav>
-        </div>
-      </div>
-
+     
       <main className="container">
         {/* Recepcion */}
 
