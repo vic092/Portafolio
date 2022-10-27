@@ -13,7 +13,7 @@ function App() {
     <BrowserRouter>
       
       <Routes>
-        <Route path="/Portafolio" element={<Body></Body>}></Route>
+        <Route path="/Portafolio/" element={<Body></Body>}></Route>
         <Route path="/GitHub" element={<GitHub></GitHub>}></Route>
         <Route path="/Portafolio/*" element={<Body></Body>}></Route>
         <Route path="*" element={<Body></Body>}></Route>

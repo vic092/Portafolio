@@ -327,9 +327,3 @@ body::-webkit-scrollbar-thumb {
   }
 }
 
-
-@media (max-width: 400px) {
- .img_filtro{
-  width: 20px;
- } 
-}
