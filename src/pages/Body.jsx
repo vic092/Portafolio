@@ -122,7 +122,7 @@ export default function Body() {
       <main className="container">
         {/* Recepcion */}
 
-        <div className="row justify-content-end" style={{ marginTop: "80px" }}>
+        <div className="row justify-content-end res">
           <div className="col-md-2">
             <button className="btn  fondo5">
               <a

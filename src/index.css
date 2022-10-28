@@ -378,7 +378,7 @@ body::-webkit-scrollbar-thumb {
     padding: 10px;
   }
 
-  .activador .logo{
+  .activador .logo {
     width: 15%;
     float: left;
   }
@@ -389,5 +389,8 @@ body::-webkit-scrollbar-thumb {
   .activador .boton button {
     background: none;
     border: none;
+  }
+  .res {
+    margin-top: 80px;
   }
 }
