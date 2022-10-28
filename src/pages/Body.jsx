@@ -1,16 +1,26 @@
 import { skills, projects } from "../profile";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 import "boxicons";
 import perfil from "../assets/Foto.jpeg";
 import Logo from "../assets/Logo.png";
 import Tarjeta from "../components/Tarjeta";
 import Footer from "../components/Footer";
-
 export default function Body() {
+  const [classMenu, setClassMenu] = useState("hide menu-responsive");
+  const open = () => {
+    console.log("Hello");
+    if (classMenu.includes("hide")) {
+      setClassMenu("menu-responsive");
+    } else {
+      setClassMenu("hide menu-responsive");
+    }
+  };
+
   return (
     <>
       {/* Barra de navegacion */}
-
+      <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
       <nav
         className="navbar navbar-expand navbar-dark text-light m-3 fondo1 menu 
        rounded-4"
@@ -60,10 +70,59 @@ export default function Body() {
 
       {/* Boton del mennu plegable */}
 
+      <section className="plegable m-3">
+        <div className="container">
+          <div className="activador">
+            <div className="logo">
+              <a className="navbar-brand" href="#">
+                <img src={Logo} alt="Logo" style={{ width: "40px" }} />
+              </a>
+            </div>
+
+            <div className="boton">
+              <button onClick={open}>
+                <box-icon name="menu" color="white" size="30px"></box-icon>
+              </button>
+            </div>
+          </div>
+
+          <div className={classMenu} id="menu">
+            <ul>
+              <li>
+                <button onClick={open}>
+                  <a href="#">Inicio</a>
+                </button>
+              </li>
+              <li>
+                <button onClick={open}>
+                  <a href="#about">Sobre mi</a>
+                </button>
+              </li>
+              <li>
+                <button onClick={open}>
+                  <a href="#skills">Conocimientos</a>
+                </button>
+              </li>
+              <li>
+                <button onClick={open}>
+                  <a href="#projects">Proyectos</a>
+                </button>
+              </li>
+              <li>
+                <button onClick={open}>
+                  <box-icon name="x" color="white" size="2.5rem"></box-icon>
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* Apartado principal */}
       <main className="container">
         {/* Recepcion */}
 
-        <div className="row justify-content-end">
+        <div className="row justify-content-end" style={{ marginTop: "80px" }}>
           <div className="col-md-2">
             <button className="btn  fondo5">
               <a
