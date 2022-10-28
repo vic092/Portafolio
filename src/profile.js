@@ -11,56 +11,67 @@ export const skills = [
     skill: "HTML",
     level: "Intermedio - Avanzado",
     percentaje: 75,
+    icon:"html5"
   },
   {
     skill: "JavaScript",
     level: "Intermedio",
     percentaje: 60,
+    icon:"javascript"
   },
   {
     skill: "Python",
     level: "Intermedio",
     percentaje: 60,
+    icon:"python"
   },
   {
     skill: "Java",
     level: "Intermedio",
     percentaje: 60,
+    icon:"java"
   },
   {
     skill: "CSS",
     level: "Intermedio",
     percentaje: 60,
+    icon:"css3"
   },
   {
     skill: "React",
     level: "Intermedio",
     percentaje: 40,
+    icon:'react'
   },
   {
     skill: "MySQL",
     level: "Intermedio",
     percentaje: 60,
+    icon:"data"
   },
   {
     skill: "NodeJs",
     level: "Básico",
     percentaje: 15,
+    icon:"nodejs"
   },
   {
     skill: "Django",
     level: "Básico",
     percentaje: 15,
+    icon:"django"
   },
   {
     skill: "MongoDB",
     level: "Básico",
     percentaje: 15,
+    icon:"mongodb"
   },
   {
     skill: "Git",
     level: "Básico",
     percentaje: 25,
+    icon:"git"
   }
   ,
 ];

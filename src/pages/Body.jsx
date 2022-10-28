@@ -1,6 +1,6 @@
 import { skills, projects } from "../profile";
 import { Link } from "react-router-dom";
-
+import "boxicons";
 import perfil from "../assets/Foto.jpeg";
 import Logo from "../assets/Logo.png";
 import Tarjeta from "../components/Tarjeta";
@@ -39,7 +39,7 @@ export default function Body() {
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#skills" >
+                <a className="nav-link" href="#skills">
                   Conociminetos
                 </a>
               </li>
@@ -59,7 +59,7 @@ export default function Body() {
       </nav>
 
       {/* Boton del mennu plegable */}
-     
+
       <main className="container">
         {/* Recepcion */}
 
@@ -82,8 +82,8 @@ export default function Body() {
             <h1>Víctor Uriel Rodríguez García</h1>
             <h3 className="text-muted">Developer en ruta</h3>
             <p className="p-3">
-              Ingeniero en Tecnologías de la información interesado en
-              seguir aprendiendo y ejercer mi profesión dentro del mundo de la
+              Ingeniero en Tecnologías de la información interesado en seguir
+              aprendiendo y ejercer mi profesión dentro del mundo de la
               programación, quiero aprender más sobre las tecnologías en
               tendecia sobre desarrollo de software y adquirir expriencia como
               desarrollador.
@@ -145,6 +145,12 @@ export default function Body() {
                     : "text-center text-light p-2 fondo4 rounded-2"
                 }
               >
+                <box-icon
+                  type={sk.icon === "data" ? "solid" : "logo"}
+                  name={sk.icon}
+                  color="white"
+                  size="30px"
+                />
                 <h5>{`${sk.skill} - ${sk.level}`}</h5>
               </div>
             </div>

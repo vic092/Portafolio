@@ -44,6 +44,10 @@ body::-webkit-scrollbar-thumb {
     /* creates padding around scroll thumb */
 }
 
+/* .op ul li a{
+  font-size: 20px;
+} */
+
 .fondo1 {
     background-color: var(--bg-fondo1);
     border: 1px solid var(--color-borde);
