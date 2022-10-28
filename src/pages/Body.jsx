@@ -1,7 +1,7 @@
 import { skills, projects } from "../profile";
 import { Link } from "react-router-dom";
 
-import perfil from "../assets/Logo.png";
+import perfil from "../assets/Foto.jpeg";
 import Logo from "../assets/Logo.png";
 import Tarjeta from "../components/Tarjeta";
 import Footer from "../components/Footer";
@@ -78,10 +78,11 @@ export default function Body() {
 
         <header className="row mt-4 fondo1 rounded-3 animacion1">
           <div className="col-md-12 p-5 text-light">
+            <p className="text-muted">Me presento, soy</p>
             <h1>Víctor Uriel Rodríguez García</h1>
             <h3 className="text-muted">Developer en ruta</h3>
             <p className="p-3">
-              Soy ingeniero en Tecnologías de la información interesado en
+              Ingeniero en Tecnologías de la información interesado en
               seguir aprendiendo y ejercer mi profesión dentro del mundo de la
               programación, quiero aprender más sobre las tecnologías en
               tendecia sobre desarrollo de software y adquirir expriencia como
