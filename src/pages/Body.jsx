@@ -67,7 +67,7 @@ export default function Body() {
           <div className="col-md-2">
             <button className="btn  fondo5">
               <a
-                href="https://drive.google.com/file/d/1MMKqK9xTnr84KxD_NJ0Qc9o7UFlR-PoO/view?usp=sharing"
+                href="https://drive.google.com/file/d/1r_OrkAgnhrRoe_q0qt_XA10Cg2XNIZ0B/view?usp=sharing"
                 style={{ textDecoration: "none", color: "#fff" }}
               >
                 Resumen
