@@ -136,11 +136,11 @@ export default function Body() {
         </div>
 
         <header className="row mt-4 rounded-3 animacion1">
-          <div className="col-md-12 p-5 text-light">
+          <div className="col-md-12 p-5 text-light type">
             <p className="text-muted">Me presento, soy</p>
             <h1>Víctor Uriel Rodríguez García</h1>
-            <h3 className="text-muted">Developer en ruta</h3>
-            <p className="p-3">
+            <h3 className="text-muted">Developer en crecimiento</h3>
+            <p className="p-3 mayorTexto">
               Ingeniero en Tecnologías de la información interesado en seguir
               aprendiendo y ejercer mi profesión dentro del mundo de la
               programación, quiero aprender más sobre las tecnologías en
@@ -192,63 +192,36 @@ export default function Body() {
         {/* Skills Vista previa */}
         <section className="row mt-5  p-4 rounded-3 animacion1">
           {skills.map((sk, i) => (
-            <div className="col-md-3 mt-3 mb-3 animacion3" key={i}>
+            <div className="col-md-4 mt-3 mb-3 animacion3" key={i}>
               <div
                 className={
                   sk.level === "Intermedio - Avanzado"
-                    ? "text-center text-light p-2 bg-danger rounded-2"
+                    ? "text-center text-light p-2 border border-danger rounded-2"
                     : sk.level === "Intermedio"
-                    ? "text-center text-light p-2 bg-primary rounded-2"
+                    ? "text-center text-light p-2 border border-primary rounded-2"
                     : sk.level === "Básico"
-                    ? "text-center text-light p-2 bg-success rounded-2"
+                    ? "text-center text-light p-2 border border-success rounded-2"
                     : "text-center text-light p-2 fondo4 rounded-2"
                 }
               >
+                <div className="row align-items-center">
+                <div className="col-md-3 ">
                 <box-icon
                   type={sk.icon === "data" ? "solid" : "logo"}
                   name={sk.icon}
-                  color="white"
-                  size="30px"
+                  color={sk.color}
+                  size="60px"
                 />
+                </div>
+                <div className="col-md-9">
                 <h5>{`${sk.skill} - ${sk.level}`}</h5>
+                </div>
+                </div>
               </div>
             </div>
           ))}
         </section>
 
-        {/* Skills por barra de progreso */}
-        {/* <section className="row mt-5">
-          <div className="row py-2">
-            <div className="col-md-12">
-              <div className="card fondo1 text-light animacion1">
-                <div className="card-body">
-                  <h1>Skills</h1>
-                  {skills.map((skill, i) => (
-                    <div key={i} className="py-3">
-                      <h5>{skill.skill}</h5>
-                      <div className="progress">
-                        <div
-                          className={
-                            skill.level === "Avanzado"
-                              ? "progress-bar bg-danger"
-                              : skill.level === "Intermedio"
-                              ? "progress-bar bg-primary"
-                              : skill.level === "Básico"
-                              ? "progress-bar bg-success"
-                              : "progress-bar bg-danger"
-                          }
-                          role="progressbar"
-                          style={{ width: `${skill.percentaje}%` }}
-                        ></div>
-                      </div>
-                      <h6 className="d-block derecha">{skill.percentaje}%</h6>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
-        </section> */}
         <hr className="mt-5 hr-text" data-content="Proyectos" id="projects" />
         {/* Sección de proyectos  */}
         <section className="row mt-5 text-light">

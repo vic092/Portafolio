@@ -2,7 +2,7 @@
   --bg-fondo1: #00010d;
   --bg-fondo2: #0c0f3f;
   --bg-fondo3: #2a364a;
-  --bg-fondo4: rgb(18, 21, 89);
+  --bg-fondo4: #121559;
   --bg-fondo5: #010326;
   --color-borde: #4f5164;
   --sombra: #fff;
@@ -51,7 +51,6 @@ body::-webkit-scrollbar-thumb {
   background-color: var(--bg-fondo1);
   border-bottom: solid 1px var(--color-borde);
   border-top: solid 1px var(--color-borde);
-
 }
 
 .fondo2 {
@@ -316,6 +315,115 @@ body::-webkit-scrollbar-thumb {
   }
 }
 
+@keyframes typing {
+  0% {
+    width: 0;
+  }
+  20% {
+    width: 0;
+  }
+  60% {
+    width: 51%;
+  }
+  75% {
+    width: 51%;
+  }
+  100% {
+    width: 51%;
+  }
+}
+
+@keyframes typing2 {
+  0% {
+    width: 0;
+  }
+  20% {
+    width: 0%;
+  }
+  50% {
+    width: 0%;
+  }
+  75% {
+    width: 35.5%;
+  }
+  90% {
+    width: 31.5%;
+  }
+  100% {
+    width: 31.5%;
+  }
+}
+
+@keyframes typing3 {
+  20% {
+    width: 12%;
+  }
+  100% {
+    width: 12%;
+  }
+}
+
+@keyframes aparicion {
+  0%{
+    color: transparent;
+  }
+  20% {
+    color: transparent;
+  }
+  50% {
+    color: transparent;
+  }
+  70% {
+    color: transparent;
+  }
+  90%{
+    color: #fff;
+  }
+  100% {
+    color: #fff;
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: var(--color-borde);
+  }
+}
+
+.type h1 {
+  width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  color: white;
+  animation: typing 4.5s steps(60, end) forwards,
+    blink-caret 0.85s step-end infinite;
+}
+
+.type h3 {
+  width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing2 4.5s steps(100, end) forwards,
+    blink-caret 0.85s step-end infinite;
+}
+
+.type p:nth-child(1) {
+  width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing3 4.5s steps(100, end) forwards,
+    blink-caret 0.85s step-end infinite;
+}
+
+.type .mayorTexto {
+  animation: aparicion 4.5s steps(100, end) forwards,
+    blink-caret 0.85s step-end infinite;
+}
+
 .plegable {
   display: none;
 }
@@ -378,7 +486,6 @@ body::-webkit-scrollbar-thumb {
     margin-top: -5px;
     padding: 10px;
   }
-
   .activador .logo {
     width: 15%;
     float: left;
