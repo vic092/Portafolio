@@ -135,7 +135,7 @@ export default function Body() {
           </div>
         </div>
 
-        <header className="row mt-4 fondo1 rounded-3 animacion1">
+        <header className="row mt-4 rounded-3 animacion1">
           <div className="col-md-12 p-5 text-light">
             <p className="text-muted">Me presento, soy</p>
             <h1>Víctor Uriel Rodríguez García</h1>
@@ -152,7 +152,7 @@ export default function Body() {
 
         <hr className="mt-5 hr-text" data-content="Sobre mi" id="about" />
         {/* Apartado sobre mi */}
-        <section className="row fondo1 mt-5 text-light rounded-3 animacion1">
+        <section className="row mt-5 text-light rounded-3 animacion1">
           <div className="col-md-4 p-4 ">
             <div className="d-flex h-100 img_filtro">
               {/* <div className="box"></div> */}
@@ -190,7 +190,7 @@ export default function Body() {
 
         <hr className="mt-5 hr-text" data-content="Conocimientos" id="skills" />
         {/* Skills Vista previa */}
-        <section className="row mt-5 fondo3 p-4 rounded-3 animacion1">
+        <section className="row mt-5  p-4 rounded-3 animacion1">
           {skills.map((sk, i) => (
             <div className="col-md-3 mt-3 mb-3 animacion3" key={i}>
               <div
