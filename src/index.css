@@ -356,15 +356,15 @@ body::-webkit-scrollbar-thumb {
 
 @keyframes typing3 {
   20% {
-    width: 12%;
+    width: 35%;
   }
   100% {
-    width: 12%;
+    width: 35%;
   }
 }
 
 @keyframes aparicion {
-  0%{
+  0% {
     color: transparent;
   }
   20% {
@@ -376,7 +376,7 @@ body::-webkit-scrollbar-thumb {
   70% {
     color: transparent;
   }
-  90%{
+  90% {
     color: #fff;
   }
   100% {
@@ -500,5 +500,117 @@ body::-webkit-scrollbar-thumb {
   }
   .res {
     margin-top: 80px;
+  }
+  @keyframes typing {
+    0% {
+      width: 0;
+    }
+    20% {
+      width: 0;
+    }
+    60% {
+      width: 100%;
+    }
+    75% {
+      width: 100%;
+    }
+    100% {
+      width: 100%;
+    }
+  }
+
+  @keyframes typing2 {
+    0% {
+      width: 0;
+    }
+    20% {
+      width: 0%;
+    }
+    50% {
+      width: 0%;
+    }
+    75% {
+      width: 88%;
+    }
+    90% {
+      width: 88%;
+    }
+    100% {
+      width: 88%;
+    }
+  }
+
+  @keyframes typing3 {
+    20% {
+      width: 42%;
+    }
+    100% {
+      width: 42%;
+    }
+  }
+
+  @keyframes aparicion {
+    0% {
+      color: transparent;
+    }
+    20% {
+      color: transparent;
+    }
+    50% {
+      color: transparent;
+    }
+    70% {
+      color: transparent;
+    }
+    90% {
+      color: #fff;
+    }
+    100% {
+      color: #fff;
+    }
+  }
+
+  @keyframes blink-caret {
+    from,
+    to {
+      border-color: transparent;
+    }
+    50% {
+      border-color: var(--color-borde);
+    }
+  }
+
+  .type h1 {
+    font-size: 20px;
+    width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    color: white;
+    animation: typing 4.5s steps(60, end) forwards,
+    blink-caret 0.85s step-end infinite;
+  }
+  
+  .type h3 {
+    font-size: 18px;
+    width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing2 4.5s steps(100, end) forwards,
+    blink-caret 0.85s step-end infinite;
+  }
+  
+  .type p:nth-child(1) {
+    font-size: 14px;
+    width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing3 4.5s steps(100, end) forwards,
+      blink-caret 0.85s step-end infinite;
+  }
+
+  .type .mayorTexto {
+    font-size: 15px;
+    animation: aparicion 4.5s steps(100, end) forwards,
+      blink-caret 0.85s step-end infinite;
   }
 }

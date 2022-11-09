@@ -126,7 +126,7 @@ export default function Body() {
           <div className="col-md-2">
             <button className="btn  fondo5">
               <a
-                href="https://drive.google.com/file/d/1r_OrkAgnhrRoe_q0qt_XA10Cg2XNIZ0B/view?usp=sharing"
+                href="https://drive.google.com/file/d/1UGZ7gGnCs4WZHJqnsO4yu1kG4o8MbMfz/view?usp=sharing"
                 style={{ textDecoration: "none", color: "#fff" }}
               >
                 Resumen
@@ -153,15 +153,14 @@ export default function Body() {
         <hr className="mt-5 hr-text" data-content="Sobre mi" id="about" />
         {/* Apartado sobre mi */}
         <section className="row mt-5 text-light rounded-3 animacion1">
-          <div className="col-md-4 p-4 ">
-            <div className="d-flex h-100 img_filtro">
+          <div className="col-md-4 p-4">
               {/* <div className="box"></div> */}
               <img
                 src={perfil}
                 alt="No hay imagen"
                 className="img-fluid rounded-5"
               />
-            </div>
+
           </div>
           <div className="col-md-8 p-5">
             <h3>Un poco mas sobre mi</h3>
@@ -205,17 +204,17 @@ export default function Body() {
                 }
               >
                 <div className="row align-items-center">
-                <div className="col-md-3 ">
-                <box-icon
-                  type={sk.icon === "data" ? "solid" : "logo"}
-                  name={sk.icon}
-                  color={sk.color}
-                  size="60px"
-                />
-                </div>
-                <div className="col-md-9">
-                <h5>{`${sk.skill} - ${sk.level}`}</h5>
-                </div>
+                  <div className="col-md-3 ">
+                    <box-icon
+                      type={sk.icon === "data" ? "solid" : "logo"}
+                      name={sk.icon}
+                      color={sk.color}
+                      size="60px"
+                    />
+                  </div>
+                  <div className="col-md-9">
+                    <h5>{`${sk.skill} - ${sk.level}`}</h5>
+                  </div>
                 </div>
               </div>
             </div>
