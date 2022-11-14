@@ -154,12 +154,13 @@ export default function Body() {
         {/* Apartado sobre mi */}
         <section className="row mt-5 text-light rounded-3 animacion1">
           <div className="col-md-4 p-4">
-              {/* <div className="box"></div> */}
+              <div className="box">
               <img
                 src={perfil}
                 alt="No hay imagen"
-                className="img-fluid rounded-5"
+                className="img-fluid rounded-5 img"
               />
+              </div>
 
           </div>
           <div className="col-md-8 p-5">
