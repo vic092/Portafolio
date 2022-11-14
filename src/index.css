@@ -450,6 +450,8 @@ body::-webkit-scrollbar-thumb {
 }
 
 @media (max-width: 470px) {
+
+
   body {
     margin-left: 5px;
     margin-right: 5px;
@@ -522,6 +524,16 @@ body::-webkit-scrollbar-thumb {
   .res {
     margin-top: 80px;
   }
+
+  .box{
+    display: grid;
+    grid-template: 1fr/1fr;
+    grid-template-areas: "img";
+    width: 250px;
+    height: 350px;
+    margin: 0px auto;
+  }
+  
   @keyframes typing {
     0% {
       width: 0;
@@ -634,4 +646,5 @@ body::-webkit-scrollbar-thumb {
     animation: aparicion 4.5s steps(100, end) forwards,
       blink-caret 0.85s step-end infinite;
   }
+  
 }
